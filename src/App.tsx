@@ -1,7 +1,11 @@
+import Footer from "./components/footer";
+import Header from "./components/header";
+
 function App() {
   return (
     <>
-      <h1 className=" text-4xl text-red-400">hello world</h1>
+      <Header />
+      <Footer />
     </>
   );
 }
