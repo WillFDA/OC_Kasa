@@ -1,4 +1,4 @@
-import Cards from "../components/cards";
+import CardsList from "../components/cards-list";
 import HeroBanner from "../components/ui/hero-banner";
 
 const Home = () => {
@@ -8,7 +8,7 @@ const Home = () => {
         image="src/assets/hero-home-image.png"
         text="Chez vous, partout et ailleurs"
       />
-      <Cards />
+      <CardsList />
     </>
   );
 };

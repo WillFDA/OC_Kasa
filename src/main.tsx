@@ -6,6 +6,7 @@ import Root from "./routes/root";
 import ErrorPage from "./error-page";
 import About from "./routes/about";
 import Home from "./routes/home";
+import Appartement from "./routes/appartement";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/appartement/:id",
+        element: <Appartement />,
       },
       {
         path: "*",
