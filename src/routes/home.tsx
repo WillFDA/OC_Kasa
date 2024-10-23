@@ -1,4 +1,11 @@
+import HeroBanner from "../components/ui/hero-banner";
+
 const Home = () => {
-  return <div className="text-4xl text-black font-bold">Hello World</div>;
+  return (
+    <HeroBanner
+      image="src/assets/hero-home-image.png"
+      text="Chez vous, partout et ailleurs"
+    />
+  );
 };
 export default Home;
