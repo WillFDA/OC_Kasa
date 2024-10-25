@@ -1,18 +1,24 @@
 import Logo from "./logo";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const Header = () => {
+  const active = ({ isActive }: { isActive: boolean }) =>
+    isActive ? "underline underline-offset-2" : "";
   return (
     <header className="flex items-center justify-between max-w-7xl px-5 mx-auto mt-5 lg:mt-11">
-      <Link to={"/"}>
+      <NavLink to={"/"}>
         <Logo />
-      </Link>
+      </NavLink>
       <nav>
         <ul className="text-xs lg:text-2xl font-medium text-black flex items-center lg:gap-14">
           <li>
-            <Link to={"/"}>Accueil</Link>
+            <NavLink className={active} to={"/"}>
+              Accueil
+            </NavLink>
           </li>
           <li>
-            <Link to={"/about"}>A propos</Link>
+            <NavLink className={active} to={"/about"}>
+              A propos
+            </NavLink>
           </li>
         </ul>
       </nav>

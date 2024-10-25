@@ -9,3 +9,4 @@ const AppartementDetails = ({ appartement }) => {
     </>
   );
 };
+export default AppartementDetails;
