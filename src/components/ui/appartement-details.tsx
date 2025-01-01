@@ -17,7 +17,7 @@ const AppartementDetails = ({ appartement }: { appartement: Appartement }) => {
             ))}
           </div>
         </div>
-        <div className="flex lg:flex-col items-end flex-row-reverse">
+        <div className="flex lg:flex-col items-end flex-row-reverse justify-between">
           <div className="flex items-center gap-2 ">
             <span className="text-primary lg:text-lg text-xs break-words text-right lg:max-w-44 max-w-14">
               {host.name}

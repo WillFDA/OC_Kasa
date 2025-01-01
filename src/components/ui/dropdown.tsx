@@ -17,7 +17,7 @@ const Dropdown = ({ title, description }: DropdownProps) => {
         />
       </div>
       {isOpen && (
-        <div className="bg-gray-100 rounded-b-[10px] p-3 pt-7 -translate-y-4 flex flex-col lg:text-lg text-xs leading-none first:mt-0">
+        <div className="bg-gray-100 rounded-b-[10px] p-3 pt-7 -translate-y-4 flex flex-col lg:text-lg text-xs leading-none  ">
           {typeof description === "string" ? (
             <p>{description}</p>
           ) : (
