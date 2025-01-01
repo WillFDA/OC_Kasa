@@ -1,4 +1,5 @@
 import { Appartement } from "../../routes/appartement";
+import { Star } from "../star";
 import Dropdown from "./dropdown";
 import { Pills } from "./pills";
 
@@ -28,7 +29,11 @@ const AppartementDetails = ({ appartement }: { appartement: Appartement }) => {
               alt={host.name}
             />
           </div>
-          <div className="flex gap-2">{rating}</div>
+          <div className="flex gap-2">
+            {Array.from({ length: 5 }).map((_, index) => (
+              <Star color={index < parseInt(rating, 10) ? "full" : "empty"} />
+            ))}
+          </div>
         </div>
       </section>
       <div className="flex flex-col lg:flex-row lg:gap-16 gap-4">
