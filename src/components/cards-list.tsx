@@ -6,6 +6,7 @@ const CardList = () => {
     <section className="lg:bg-gray-100 lg:px-12 lg:py-14 grid grid-cols-1 lg:grid-cols-3 gap-x-[60px] lg:gap-y-[50px] gap-y-5 rounded-3xl">
       {data?.map((appartement) => (
         <Link
+          key={appartement.id}
           to={`appartement/${appartement.id}`}
           className="bg-primary w-full aspect-square rounded-lg relative overflow-hidden card-shadow"
         >

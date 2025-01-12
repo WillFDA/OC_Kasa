@@ -21,7 +21,11 @@ const Dropdown = ({ title, description }: DropdownProps) => {
           {typeof description === "string" ? (
             <p>{description}</p>
           ) : (
-            description.map((item) => <p className="mt-2">{item}</p>)
+            description.map((item, index) => (
+              <p key={index + item} className="mt-2">
+                {item}
+              </p>
+            ))
           )}
         </div>
       )}

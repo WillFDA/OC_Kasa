@@ -14,7 +14,7 @@ const AppartementDetails = ({ appartement }: { appartement: Appartement }) => {
           <span className="lg:text-lg text-sm">{location}</span>
           <div className="flex gap-2 mt-2">
             {appartement.tags.map((tag) => (
-              <Pills tag={tag} />
+              <Pills key={tag} tag={tag} />
             ))}
           </div>
         </div>
@@ -31,7 +31,10 @@ const AppartementDetails = ({ appartement }: { appartement: Appartement }) => {
           </div>
           <div className="flex gap-2">
             {Array.from({ length: 5 }).map((_, index) => (
-              <Star color={index < parseInt(rating, 10) ? "full" : "empty"} />
+              <Star
+                key={index}
+                color={index < parseInt(rating, 10) ? "full" : "empty"}
+              />
             ))}
           </div>
         </div>
